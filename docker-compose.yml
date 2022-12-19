@@ -1,12 +1,9 @@
-docker build -t agemaliel/from from
+version: '2'
 
-docker image ls
+services:
 
-#RUN Instruction
+  web:
+  image: nginx
 
-docker build -t agemaliel/run run
-
-#CMD
-docker build -t agemaliel/ command command
-
-docker images inspect agemaliel/command
+  database:
+  image: mongo
